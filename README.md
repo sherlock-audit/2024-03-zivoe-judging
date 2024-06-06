@@ -114,6 +114,10 @@ The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/260
 
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue H-2: ITO can be manipulated 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/12 
@@ -278,6 +282,10 @@ The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/266
 
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue H-3: User cannot withdraw stakingToken due to incorrect calculation of _totalSupply 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/31 
@@ -434,6 +442,10 @@ The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/268
 
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue H-4: Revoking vesting schedule does not subtract user votes correctly 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/118 
@@ -541,6 +553,10 @@ _writeCheckpoint(_checkpoints[account], _subtract, vestingAmount - vestingSchedu
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/268
 
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue H-5: ````depositReward()```` with zero amount to get reward tokens stuck in ````ZivoeRewards```` contracts 
 
@@ -700,6 +716,10 @@ Valid, considering adding whitelists
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/260
 
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue H-6: Protocol unable to get extra Rewards in OCY_Convex_C 
 
@@ -971,6 +991,10 @@ Escalations have been resolved successfully!
 Escalation status:
 - [RealLTDingZhen](https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/477/#issuecomment-2105666150): accepted
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue H-7: cannot forward extra rewards from both OCY_Convex to OCT_YDL. 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/479 
@@ -1040,6 +1064,16 @@ Use the real token address for token transfer.
 > high, dup of #477, loss of additional reward from convex. Since it accumulates over 30-days period, the loss will be significant. Both `balanceOf` and `safeTransfer` are incorrect - they should be called on `rewardToken().token()`. Different dups of this mention either `balanceOf` or `safeTransfer`, but not both, but I consider them to be the same root cause, so all are dups.
 
 
+
+**sherlock-admin2**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/Zivoe/zivoe-core-foundry/pull/273
+
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue M-1: ZivoeYDL::distributeYield() will revert if protocolRecipients recipients length is smaller than residualRecipients 
 
@@ -1204,6 +1238,10 @@ Valid
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/253
 
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue M-2: OCL_ZVE::pushToLockerMulti() will revert due to incorrect assert() statements when interacting with UniswapV2 
 
@@ -1393,6 +1431,10 @@ The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/264
 
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-3: distributeYield() calls earningsTrancheuse() with outdated emaSTT & emaJTT while calculating senior & junior tranche yield distributions 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/54 
@@ -1556,6 +1598,10 @@ Agree with sponsor, changing back to Medium
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/263
 
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue M-4: Forwarding yield in `OCL_ZVE` is possible a lot more often than the enforced 30 days 
 
@@ -1771,6 +1817,10 @@ Escalations have been resolved successfully!
 
 Escalation status:
 - [spacegliderrrr](https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/55/#issuecomment-2105747094): rejected
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue M-5: When APR late rate is lower than APR, an OCC locker bullet loan borrower can pay way less interests by calling the loan 
 
@@ -2298,6 +2348,10 @@ Keeping this medium as sponsor confirmed it's valid (thus considering that N=2 i
 The protocol team fixed this issue in the following PRs/commits:
 https://github.com/Zivoe/zivoe-core-foundry/pull/252
 
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
 # Issue M-8: `ZivoeTranches#rewardZVEJuniorDeposit` function miscalculates the reward when the ratio traverses lower/upper bound. 
 
@@ -2839,6 +2893,8 @@ Escalation status:
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/304 
 
+The protocol has acknowledged this issue.
+
 ## Found by 
 cergyk, denzi\_, jasonxiale
 ## Summary
@@ -3059,6 +3115,8 @@ Escalation status:
 # Issue M-13: `ZivoeYDL::earningsTrancheuse()` always assumes that `daysBetweenDistributions` have passed, which might not be the case 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/347 
+
+The protocol has acknowledged this issue.
 
 ## Found by 
 0x73696d616f
@@ -3568,7 +3626,7 @@ I feel like for this type of issue some sort of written POC should be required t
 
 E.g. #18 describes a similar issue for UniSwap and outlines the exact scenario of how leftover allowance can occur with code-snippets.
 
-**ironsidesec**
+**IronsideSec**
 
 In the vulnerability section, watson says ` If the router does not utilize the entire allowance specified due to slippage or other reasons`
 submit a POC to prove that 1inch will operate in a way that allowance will be > 0 in any of the success swap paths, then issue might be valid.
@@ -3602,9 +3660,15 @@ https://github.com/Zivoe/zivoe-core-foundry/pull/262
 
 There are currently 2 separate issues regarding vulnerable `assert` statements in swaps: #18 with UniSwap and this one for 1inch. Since the root cause is the same (flawed dev design choice of using `assert`) why are they considered as separate bugs?
 
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-15: DAO unable to withdraw their funds due to Convex admin action 
 
 Source: https://github.com/sherlock-audit/2024-03-zivoe-judging/issues/657 
+
+The protocol has acknowledged this issue.
 
 ## Found by 
 AllTooWell, Bauchibred, BiasedMerc, BoRonGod, KingNFT, ZanyBonzy, rbserver, saidam017
